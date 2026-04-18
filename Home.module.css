@@ -1,0 +1,182 @@
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  animation: fadeUp 0.5s ease;
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.heroBadge { margin-bottom: 16px; }
+
+.heroTitle {
+  font-size: clamp(36px, 6vw, 60px);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.heroAccent {
+  background: linear-gradient(135deg, #00e5ff, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.heroSub {
+  font-size: 16px;
+  color: var(--text-secondary);
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 20px;
+  align-items: start;
+}
+
+.mainCol { display: flex; flex-direction: column; gap: 16px; }
+.sideCol { display: flex; flex-direction: column; gap: 0; }
+
+.inputRow {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: relative;
+}
+
+.pwInput {
+  border-radius: 12px 0 0 12px !important;
+  border-right: none !important;
+  font-family: var(--font-mono) !important;
+  font-size: 16px !important;
+  letter-spacing: 1px;
+  flex: 1;
+}
+
+.inputActions {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  background: var(--bg-input);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-left: none;
+  border-radius: 0 12px 12px 0;
+  padding: 0 10px;
+  height: 51px;
+}
+
+.iconBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-secondary);
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: background 0.15s, color 0.15s;
+}
+
+.iconBtn:hover {
+  background: rgba(255,255,255,0.06);
+  color: var(--text-primary);
+}
+
+.charDisplay {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px;
+  margin-top: 14px;
+  padding: 12px;
+  background: rgba(0,0,0,0.3);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+  min-height: 44px;
+}
+
+.char {
+  font-family: var(--font-mono);
+  font-size: 15px;
+  width: 22px;
+  height: 26px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.charUpper { color: #00e5ff; background: rgba(0,229,255,0.1); }
+.charLower { color: #c8d0ff; background: rgba(200,208,255,0.08); }
+.charNum { color: #ffb700; background: rgba(255,183,0,0.1); }
+.charSpecial { color: #00ff88; background: rgba(0,255,136,0.1); }
+.charNeutral { color: var(--text-muted); background: rgba(255,255,255,0.04); }
+
+.sideHint { margin-top: 20px; }
+
+.hintGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.hintItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.hintDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  flex-shrink: 0;
+}
+
+.tipsTitle {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+}
+
+.tipsList { display: flex; flex-direction: column; gap: 10px; }
+
+.tipItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.tipIcon { font-size: 15px; flex-shrink: 0; margin-top: 1px; }
+
+.tipText {
+  font-size: 13px;
+  color: var(--text-secondary);
+  line-height: 1.4;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+  .sideCol { margin-top: 0; }
+}
+
+@media (max-width: 480px) {
+  .page { padding: 24px 16px 60px; }
+  .heroTitle { font-size: 32px; }
+}
